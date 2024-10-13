@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  position: relative;
+}
+
+main::before {
+  background-image: url("bg-2.jpg");
+  background-size: cover;
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+}
+
+p {
+  isolation: isolate;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to an element */
+.slow-spin {
+  display: inline-block;
+  animation: slow-spin 5s linear infinite;
+}
